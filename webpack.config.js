@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const CustomFunctionsMetadataPlugin = require("custom-functions-metadata-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const urlDev = "https://localhost:3000/";
-const urlProd = "https://llmexcel.liminity.se/";
+const urlProd = "https://vvihsesoftware.github.io/dc-expert/";
 
 
 /* global require, module, process */
@@ -27,6 +27,7 @@ module.exports = async (env, options) => {
     },
     output: {
       clean: true,
+      publicPath: "./",
     },
     resolve: {
       extensions: [".ts", ".html", ".js"],
