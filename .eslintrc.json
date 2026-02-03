@@ -4,5 +4,10 @@
   ],
   "extends": [
     "plugin:office-addins/recommended"
-  ]
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  }
 }

@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const urlDev = "https://localhost:3000/";
 const urlProd = "https://llmexcel.liminity.se/";
 
+
 /* global require, module, process */
 
 async function getHttpsOptions() {
@@ -22,7 +23,7 @@ module.exports = async (env, options) => {
       polyfill: ["core-js/stable", "regenerator-runtime/runtime"],
       taskpane: ["./src/taskpane/taskpane.ts", "./src/taskpane/taskpane.html"],
       commands: "./src/commands/commands.ts",
-      functions: "./src/functions/functions.ts",
+      "custom-functions": "./src/functions/functions.ts",
     },
     output: {
       clean: true,
@@ -64,13 +65,16 @@ module.exports = async (env, options) => {
       new HtmlWebpackPlugin({
         filename: "taskpane.html",
         template: "./src/taskpane/taskpane.html",
-        chunks: ["polyfill", "taskpane", "functions", "commands"],
+        chunks: ["polyfill", "taskpane", "custom-functions", "commands"],
       }),
       new CopyWebpackPlugin({
         patterns: [
           {
             from: "assets/*",
             to: "assets/[name][ext][query]",
+            globOptions: {
+              ignore: ["**/functions.json"],
+            },
           },
           {
             from: "manifest*.xml",

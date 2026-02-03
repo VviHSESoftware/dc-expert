@@ -1,5 +1,5 @@
 {
-  "name": "llmexcel",
+  "name": "dc-expert",
   "version": "1.0.0.1",
   "repository": {
     "type": "git",
@@ -7,8 +7,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "webpack --mode production",
-    "build:dev": "webpack --mode development",
+    "build": "npm run build:functions-metadata && webpack --mode production",
+    "build:dev": "npm run build:functions-metadata && webpack --mode development",
+    "build:functions-metadata": "npx custom-functions-metadata generate ./src/functions/functions.ts ./dist/functions.json",
     "dev-server": "webpack serve --mode development",
     "lint": "office-addin-lint check",
     "lint:fix": "office-addin-lint fix",
@@ -23,13 +24,16 @@
     "validate": "office-addin-manifest validate manifest.xml",
     "watch": "webpack --mode development --watch",
     "resize-icons": "./resize-icons.sh assets/logo-filled.png assets/",
-    "deploy-production": "npm run build && touch dist/index.html && swa deploy --deployment-token $(cat DEPLOYMENT_TOKEN) dist --env production"
+    "deploy-production": "npm run build && touch dist/index.html && swa deploy --deployment-token $(cat DEPLOYMENT_TOKEN) dist --env production",
+    "proxy-start": "cd proxy && npm install && npm start",
+    "proxy-dev": "cd proxy && npm install && npm run dev"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.27.1",
     "core-js": "^3.36.0",
     "openai": "^4.57.0",
-    "regenerator-runtime": "^0.14.1"
+    "regenerator-runtime": "^0.14.1",
+    "socks-proxy-agent": "^8.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.24.0",

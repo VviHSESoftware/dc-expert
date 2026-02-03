@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
   <Id>3b8923b8-6b7c-4b50-bf7e-1bd1844528d7</Id>
-  <Version>1.0.0.2</Version>
+  <Version>1.0.0.7</Version>
   <ProviderName>Liminity AB</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="LLM add-in for Excel"/>
-  <Description DefaultValue="LLM add-in for Excel is a free, open-source Excel add-in that allows you to use GPT and Anthropic AI models directly within Excel spreadsheets. "/>
+  <DisplayName DefaultValue="DC expert"/>
+  <Description DefaultValue="DC expert — это надстройка Excel, которая позволяет использовать модели искусственного интеллекта прямо в электронных таблицах."/>
   <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-64.png"/>
   <SupportUrl DefaultValue="https://www.liminity.se/"/>
@@ -89,20 +89,20 @@
         <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/assets/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Functions.Script.Url" DefaultValue="https://localhost:3000/functions.js"/>
+        <bt:Url id="Functions.Script.Url" DefaultValue="https://localhost:3000/custom-functions.js"/>
         <bt:Url id="Functions.Metadata.Url" DefaultValue="https://localhost:3000/functions.json"/>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://github.com/liminityab/llmexcel"/>
         <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="Functions.Namespace" DefaultValue="LLMExcel"/>
-        <bt:String id="GetStarted.Title" DefaultValue="Get started with LLM add-in for Excel"/>
-        <bt:String id="CommandsGroup.Label" DefaultValue="AI Tools"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Open LLM add-in for Excel"/>
+        <bt:String id="Functions.Namespace" DefaultValue="DCexpert"/>
+        <bt:String id="GetStarted.Title" DefaultValue="Начните работу с DC expert"/>
+        <bt:String id="CommandsGroup.Label" DefaultValue="AI Инструменты"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="DC expert"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="Your LLM add-in for Excel loaded successfully. Go to the HOME tab and click the 'Open LLM add-in for Excel' button to get started."/>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to open LLM add-in for Excel"/>
+        <bt:String id="GetStarted.Description" DefaultValue="DC expert успешно загружен. Перейдите на вкладку ГЛАВНАЯ и нажмите кнопку 'DC expert', чтобы начать работу."/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Нажмите, чтобы открыть DC expert"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

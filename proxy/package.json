@@ -1,0 +1,16 @@
+{
+  "name": "excel-copilot-proxy",
+  "version": "1.0.0",
+  "description": "Proxy server for Excel Copilot addon using 168.90.196.95:8000:Xjyc9L:bEJrmk",
+  "main": "proxy-server.js",
+  "scripts": {
+    "start": "node proxy-server.js",
+    "dev": "nodemon proxy-server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

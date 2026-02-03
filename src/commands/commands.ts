@@ -7,7 +7,7 @@
 function action(event: Office.AddinCommands.Event) {
   const message: Office.NotificationMessageDetails = {
     type: Office.MailboxEnums.ItemNotificationMessageType.InformationalMessage,
-    message: "LLM add-in for Excel is ready.",
+    message: "DC expert готов к работе.",
     icon: "Icon.80x80",
     persistent: true,
   };

@@ -1,8 +1,8 @@
-# Support for LLM add-in for Excel
+# Support for DC expert
 
 ## How to Get Help
 
-If you're experiencing issues with LLM add-in for Excel or have questions about its usage, we're here to help. Here are the best ways to get support:
+If you're experiencing issues with DC expert or have questions about its usage, we're here to help. Here are the best ways to get support:
 
 1. **GitHub Issues**: For bug reports and feature requests, please use our [GitHub Issues](https://github.com/liminityab/llmexcel/issues) page. Before creating a new issue, please search existing issues to avoid duplicates.
 
@@ -14,8 +14,8 @@ If you're experiencing issues with LLM add-in for Excel or have questions about 
 
 ## Reporting Security Vulnerabilities
 
-If you discover a security vulnerability within LLM add-in for Excel, please send an email to [security@liminity.se](mailto:security@liminity.se). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within DC expert, please send an email to [security@liminity.se](mailto:security@liminity.se). All security vulnerabilities will be promptly addressed.
 
 ## Support Policy
 
-LLM add-in for Excel is an open-source project maintained by Liminity AB. While we strive to provide timely support and address issues, please understand that our resources are limited. We prioritize critical bugs and security issues.
+DC expert is an open-source project maintained by Liminity AB. While we strive to provide timely support and address issues, please understand that our resources are limited. We prioritize critical bugs and security issues.
