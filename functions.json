@@ -1,0 +1,100 @@
+{
+    "allowCustomDataForDataTypeAny": true,
+    "functions": [
+        {
+            "description": "Generates a response based on the given prompt using the specified AI model and provider.",
+            "helpUrl": "https://dcexpert.liminity.se/help",
+            "id": "PROMPT",
+            "name": "PROMPT",
+            "parameters": [
+                {
+                    "description": "The prompt message to send to the AI. a",
+                    "name": "message",
+                    "type": "string"
+                },
+                {
+                    "description": "The AI model to use for generating the response.",
+                    "name": "model",
+                    "type": "string"
+                },
+                {
+                    "description": "The API key for the AI service.",
+                    "name": "apiKey",
+                    "type": "string"
+                },
+                {
+                    "description": "An optional system prompt to provide context for the AI.",
+                    "name": "systemPrompt",
+                    "type": "string"
+                },
+                {
+                    "description": "The AI provider (Nebius).",
+                    "name": "provider",
+                    "type": "string"
+                }
+            ],
+            "result": {
+                "type": "string"
+            }
+        },
+        {
+            "description": "Simplified AI function. Uses settings from the taskpane (API Key, Model, Provider).",
+            "id": "DCEXPERT",
+            "name": "DCEXPERT",
+            "parameters": [
+                {
+                    "description": "The cell value or data to process.",
+                    "name": "data",
+                    "type": "any"
+                },
+                {
+                    "description": "The prompt or instruction for the AI.",
+                    "name": "prompt",
+                    "type": "string"
+                }
+            ],
+            "result": {
+                "type": "string"
+            }
+        },
+        {
+            "description": "Generates a streaming response based on the given prompt using the specified AI model and provider.",
+            "helpUrl": "https://dcexpert.liminity.se/help",
+            "id": "PROMPT_STREAM",
+            "name": "PROMPT_STREAM",
+            "options": {
+                "stream": true
+            },
+            "parameters": [
+                {
+                    "description": "The prompt message to send to the AI.",
+                    "name": "message",
+                    "type": "string"
+                },
+                {
+                    "description": "The AI model to use for generating the response.",
+                    "name": "model",
+                    "type": "string"
+                },
+                {
+                    "description": "The API key for the AI service.",
+                    "name": "apiKey",
+                    "type": "string"
+                },
+                {
+                    "description": "An optional system prompt to provide context for the AI.",
+                    "name": "systemPrompt",
+                    "type": "string"
+                },
+                {
+                    "description": "The AI provider (Nebius).",
+                    "name": "provider",
+                    "type": "string"
+                }
+            ],
+            "result": {
+                "type": "string"
+            }
+        }
+    ]
+}
