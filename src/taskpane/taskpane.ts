@@ -186,15 +186,13 @@ function initApp() {
       (document.getElementById("setting-key") as HTMLInputElement).value = settings.apiKey || "";
       (document.getElementById("setting-model") as HTMLInputElement).value =
         settings.model || "meta-llama/Meta-Llama-3.1-70B-Instruct";
-      (document.getElementById("setting-proxy") as HTMLInputElement).value =
-        "https://excelprx.hsecontest.ru/";
+      (document.getElementById("setting-proxy") as HTMLInputElement).value = "https://excelprx.hsecontest.ru";
       (document.getElementById("setting-system-prompt") as HTMLTextAreaElement).value =
         settings.systemPrompt ||
         "Вы — экспертный ассистент Excel по имени DC expert. Помогайте пользователю с анализом данных, формулами и задачами в таблицах.";
     } else {
       // Default proxy - run ./start-proxy.sh to start local proxy server
-      (document.getElementById("setting-proxy") as HTMLInputElement).value =
-        "https://excelprx.hsecontest.ru/";
+      (document.getElementById("setting-proxy") as HTMLInputElement).value = "https://excelprx.hsecontest.ru";
       (document.getElementById("setting-system-prompt") as HTMLTextAreaElement).value =
         "Вы — экспертный ассистент Excel по имени DC expert. Помогайте пользователю с анализом данных, формулами и задачами в таблицах.";
     }
