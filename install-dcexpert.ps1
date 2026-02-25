@@ -1,5 +1,5 @@
 $ErrorActionPreference = "Stop"
-$ManifestUrl = "https://myaddin.company.com/manifest.xml"
+$ManifestUrl = "https://vvihsesoftware.github.io/dc-expert/manifest.xml"
 $LocalFolder = "C:\DCExpertManifest"
 $ShareName = "DCExpert"
 

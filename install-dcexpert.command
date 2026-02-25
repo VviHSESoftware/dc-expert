@@ -1,5 +1,5 @@
 #!/bin/bash
-MANIFEST_URL="https://myaddin.company.com/manifest.xml"
+MANIFEST_URL="https://vvihsesoftware.github.io/dc-expert/manifest.xml"
 WEF_DIR="$HOME/Library/Containers/com.microsoft.Excel/Data/Documents/wef"
 
 echo "Установка DC Expert..."
