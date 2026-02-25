@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DC Expert</title>
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css" />
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="ms-font-m ms-Fabric">
+    <div id="app-container">
+      <header id="header">
+        <div class="logo-section">
+          <span class="logo-text">DC <span class="highlight">Expert</span></span>
+        </div>
+        <div class="header-actions">
+          <button id="help-btn" class="icon-button" title="Справка">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+          </button>
+          <button id="settings-btn" class="icon-button" title="Настройки">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <main id="chat-container">
+        <div id="messages-list">
+          <div class="message system welcome-card">
+            <div class="welcome-header">
+              <h3 class="welcome-title">Помощник от Data Culture</h3>
+            </div>
+            <p><b>Как использовать чат:</b></p>
+            <ol class="welcome-list">
+                <li>Выделите ячейку с данными</li>
+                <li>Введите запрос в поле ниже</li>
+                <li>Нажмите "Отправить" или "Анализировать"</li>
+            </ol>
+            <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 12px 0;"/>
+            <p><b>Смарт-функция:</b></p>
+            <p class="welcome-note" style="margin-top: 4px;">
+              <code>=DCexpert.DCEXPERT(A1; "переведи на англ")</code>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer id="input-area">
+        <div id="selection-status" class="hidden">
+          <span id="selection-info">Данные выбраны</span>
+          <button id="clear-selection" title="Очистить контекст">✕</button>
+        </div>
+        <div class="input-wrapper">
+          <textarea id="user-input" placeholder="Введите ваш запрос..." rows="3"></textarea>
+          <div class="button-row">
+            <button id="analyze-btn" class="ms-Button ms-Button--primary action-button">
+              <span class="ms-Button-label">Анализировать</span>
+            </button>
+            <button id="send-btn" class="ms-Button ms-Button--default chat-button">
+              <span class="ms-Button-label">В чат</span>
+            </button>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Help Modal -->
+      <div id="help-modal" class="modal hidden">
+        <div class="modal-content help-modal-content">
+          <h3>Руководство</h3>
+          <div class="help-section">
+            <p><b>1. Настройка:</b> Нажмите на шестеренку ⚙️ и введите Сервисный Токен, выданный администратором.</p>
+            <p><b>2. Формулы:</b> Используйте <code>=DCexpert.DCEXPERT(ячейка; "запрос")</code> прямо в таблице.</p>
+            <p><b>3. Анализ:</b> Выделите данные и напишите запрос в чат. Бот ответит с учетом контекста.</p>
+          </div>
+          <button id="close-help" class="ms-Button ms-Button--primary">Понятно</button>
+        </div>
+      </div>
+
+      <!-- Settings Modal (УПРОЩЕННАЯ) -->
+      <div id="settings-modal" class="modal hidden">
+        <div class="modal-content">
+          <h3>Настройки</h3>
+          <p style="font-size: 13px; color: #64748b; margin-top: 0;">Для работы плагина требуется авторизация.</p>
+          <div class="setting-item">
+            <label>Токен доступа (Service Token)</label>
+            <input type="password" id="setting-token" placeholder="Введите ваш токен" />
+          </div>
+          <div class="setting-item" style="display: none;">
+            <label>Системный промпт</label>
+            <textarea id="setting-system-prompt" rows="2"></textarea>
+          </div>
+          <button id="save-settings" class="ms-Button ms-Button--primary">Сохранить</button>
+          <button id="close-settings" class="ms-Button">Отмена</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
