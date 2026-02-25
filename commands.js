@@ -1,2 +1,2 @@
-Office.actions.associate("action",(function(e){const i={type:Office.MailboxEnums.ItemNotificationMessageType.InformationalMessage,message:"DC expert готов к работе.",icon:"Icon.80x80",persistent:!0};Office.context.mailbox.item.notificationMessages.replaceAsync("ActionPerformanceNotification",i),e.completed()}));
+Office.actions.associate("action",function(e){const i={type:Office.MailboxEnums.ItemNotificationMessageType.InformationalMessage,message:"DC expert готов к работе.",icon:"Icon.80x80",persistent:!0};Office.context.mailbox.item.notificationMessages.replaceAsync("ActionPerformanceNotification",i),e.completed()});
 //# sourceMappingURL=commands.js.map
